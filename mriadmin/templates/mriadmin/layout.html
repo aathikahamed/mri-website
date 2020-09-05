@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="{% static 'mriadmin/app.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="{% static 'mriadmin/favicon.ico' %}" type="image/x-icon" />
+  <title>MRI</title>
+</head>
+
+
+<body>
+  <div id="fb-root"></div>
+
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0"
+    nonce="Vs7DjhDi"></script>
+  <div class="mri-logo">
+    <img class="mt-2" width="170px" height="138px" src="{% static 'mriadmin/mri.png' %}" alt="MRI-LOGO" />
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav m-auto">
+        <a class="nav-item nav-link active nav-font" href="{% url 'index' %}">HOME</a>
+
+        <li class="nav-item dropdown" id="dropdown-heading">
+          <a class="nav-link dropdown-toggle nav-item active nav-font" href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            OUR SCHOOL
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{% url 'about' %}">ABOUT</a>
+            <a class="dropdown-item" href="{% url 'school_song' %}">SCHOOL SONG</a>
+
+          </div>
+        </li>
+        <a class="nav-item nav-link active nav-font" href="{% url 'news' %}">NEWS</a>
+        <a class="nav-item nav-link active nav-font" href="{% url 'calendar' %}">CALENDAR</a>
+        <a class="nav-item nav-link active nav-font" href="{% url 'admission' %}">ADMISSIONS</a>
+        <a class="nav-item nav-link active nav-font" href="{% url 'contact' %}">CONTACT</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">{% block body %}{% endblock %}</div>
+
+  <footer>
+    <div class="container footer-icons">
+      <a target="_blank" href="https://www.facebook.com/mountroyallk/"><img
+          src="{% static 'mriadmin/facebook.png' %}" /></a>
+      <a target="_blank" href="https://twitter.com/mrialert"><img src="{% static 'mriadmin/twitter.png' %}" /></a>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

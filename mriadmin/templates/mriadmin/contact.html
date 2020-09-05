@@ -1,0 +1,68 @@
+{% extends 'mriadmin/layout.html' %}{% load static %} {% block body %}
+<h1 class="contact-text">Contact</h1>
+<hr />
+
+<div id="sent-success" class="alert alert-success">
+  Message Sent successfully
+</div>
+
+<form id="contact-form" class="mb-3">
+  <div class="form-row mb-3">
+    <div class="col">
+      <label for="first_name">First Name</label>
+      <input type="text" class="form-control" id="first_name" required />
+    </div>
+    <div class="col">
+      <label for="last_name">Last Name</label>
+      <input type="text" id="last_name" class="form-control" required />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" required />
+  </div>
+  <div class="form-group">
+    <label for="phone_number">Phone Number</label>
+    <input id="phone_number" type="text" class="form-control" required />
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="check" hidden />
+  </div>
+  <div class="form-group">
+    <label for="subject">Subject</label>
+    <input type="text" class="form-control" id="subject" required />
+  </div>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" class="form-control" required></textarea>
+  </div>
+
+  <input
+    class="btn mt-3"
+    style="background-color: blueviolet; color: white"
+    type="submit"
+    value="Send"
+  />
+</form>
+
+<div class="contact">
+  <div class="address">
+    <img src="{% static 'mriadmin/address.png' %}" />
+    <h1>Location</h1>
+    <p>67, Kawdana Road, Dehiwala</p>
+  </div>
+  <div class="telephone">
+    <img src="{% static 'mriadmin/telephone.png' %}" />
+    <h1>Phone</h1>
+    <p>0112712149</p>
+  </div>
+  <div class="email">
+    <img src="{% static 'mriadmin/email.png' %}" />
+    <h1>Email</h1>
+    <p>mrilanka@gmail.com</p>
+  </div>
+</div>
+
+<script src="{% static 'mriadmin/app.js' %}"></script>
+
+{% endblock %}

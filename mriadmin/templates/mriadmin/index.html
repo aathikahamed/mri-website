@@ -1,0 +1,169 @@
+{% extends 'mriadmin/layout.html' %}{% load static %} {% block body %}
+
+<div id="myCarousel" class="carousel slide" date-ride="carousel">
+
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
+    <li data-target="#myCarousel" data-slide-to="5"></li>
+    <li data-target="#myCarousel" data-slide-to="6"></li>
+    <li data-target="#myCarousel" data-slide-to="7"></li>
+    <li data-target="#myCarousel" data-slide-to="8"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="background-image: url({% static 'mriadmin/newfolder/mri11.jpg' %})"></div>
+    <div class="carousel-item" style="background-image: url({% static 'mriadmin/newfolder/mri25.jpg' %})"></div>
+    <div class="carousel-item" style="background-image: url({% static 'mriadmin/newfolder/mri14.jpg' %})"></div>
+    <div class="carousel-item" style="background-image: url({% static 'mriadmin/newfolder/mri12.jpg' %})"></div>
+    <div class="carousel-item" style="background-image: url({% static 'mriadmin/newfolder/mri.jpg' %})"></div>
+    <div class="carousel-item" style="background-image: url({% static 'mriadmin/newfolder/mri3.jpg' %})"></div>
+    <div class="carousel-item" style="background-image: url({% static 'mriadmin/newfolder/mri6.jpg' %})"></div>
+    <div class="carousel-item" style="background-image: url({% static 'mriadmin/newfolder/mri7.jpg' %})"></div>
+    <div class="carousel-item" style="background-image: url({% static 'mriadmin/newfolder/mri9.jpg' %})"></div>
+  </div>
+
+  <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+    <span class="sr-only">Previous</span>
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </a>
+  <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+    <span class="sr-only">Previous</span>
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </a>
+
+</div>
+
+<div class="image-row">
+  <a href="{% url 'pregrade' %}"><img src="{% static 'mriadmin/pregrade.jpg' %}" class="img-fluid" /></a>
+  <a href="{% url 'primary' %}"><img src="{% static 'mriadmin/primary.jpg' %}" class="img-fluid" /></a>
+  <a href="{% url 'secondary' %}"><img src="{% static 'mriadmin/secondary.jpg' %}" class="img-fluid" /></a>
+</div>
+<h3 class="news-heading">CLUBS AND SOCITIES</h3>
+<p>
+  At Mount Royal, we cater not only towards the child’s academics, but social
+  skills too.
+</p>
+
+<ul>
+  <li>
+    <h5>Debating Club:</h5>
+    <p>
+      The purpose of this club is to teach the students the ability to stand up
+      and speak in front of an audience. It also helps to encourage confidence
+      and team work among the students. Furthermore, this helps instill general
+      knowledge and improve the students’ critical thinking and presentation
+      skills.
+    </p>
+  </li>
+  <li>
+    <h5>Science Club:</h5>
+    <p>
+      The purpose of this club is to teach the students the ability to stand up
+      and speak in front of an audience. It also helps to encourage confidence
+      and team work among the students. Furthermore, this helps instill general
+      knowledge and improve the students’ critical thinking and presentation
+      skills.
+    </p>
+  </li>
+  <li>
+    <h5>Art and Craft Club:</h5>
+    <p>
+      The purpose of this club is to teach the students the ability to stand up
+      and speak in front of an audience. It also helps to encourage confidence
+      and team work among the students. Furthermore, this helps instill general
+      knowledge and improve the students’ critical thinking and presentation
+      skills.
+    </p>
+  </li>
+  <li>
+    <h5>English Union:</h5>
+    <p>
+      The purpose of this club is to teach the students the ability to stand up
+      and speak in front of an audience. It also helps to encourage confidence
+      and team work among the students. Furthermore, this helps instill general
+      knowledge and improve the students’ critical thinking and presentation
+      skills.
+    </p>
+  </li>
+  <li>
+    <h5>Maths Club:</h5>
+    <p>
+      The purpose of this club is to teach the students the ability to stand up
+      and speak in front of an audience. It also helps to encourage confidence
+      and team work among the students. Furthermore, this helps instill general
+      knowledge and improve the students’ critical thinking and presentation
+      skills.
+    </p>
+  </li>
+  <li>
+    <h5>Environmental Club:</h5>
+    <p>
+      The purpose of this club is to teach the students the ability to stand up
+      and speak in front of an audience. It also helps to encourage confidence
+      and team work among the students. Furthermore, this helps instill general
+      knowledge and improve the students’ critical thinking and presentation
+      skills.
+    </p>
+  </li>
+</ul>
+<h3 class="news-heading" id="extra">EXTRA CURRICULAR ACTIVITIES</h3>
+<p>
+  At Mount Royal, our students are encouraged to participate in a wide array of
+  activities apart from the curriculum. Co-curricular activities include the
+  clubs and societies available to them. Co-curricular activities not only help
+  give a child independence and responsibility but also help manage time, thus
+  creating an overall positive impact on society.
+</p>
+<!-- <h5>Indoor Activities:</h5> -->
+
+<ul>
+  <li>
+    <h6>Swimming</h6>
+  </li>
+  <li>
+    <h6>Badminton</h6>
+  </li>
+  <li>
+    <h6>Karate</h6>
+  </li>
+  <li>
+    <h6>Scrabble</h6>
+  </li>
+  <li>
+    <h6>Futsal</h6>
+  </li>
+</ul>
+<h3 class="news-heading">LATEST NEWS & EVENTS</h3>
+<div class="news">
+  {% for new in news %}
+  <div class="news-left">
+    <img class="mb-2 rounded img-fluid" src="{{new.image.url}}" width="500px" />
+  </div>
+  <div class="news-right">
+    <h2>{{new.title}}</h2>
+    <p>{{new.description}}</p>
+  </div>
+  {% endfor %}
+</div>
+<a href="{% url 'news' %}">MORE NEWS & EVENTS &#8594;</a>
+<hr />
+<div class="feeds">
+  <div class="fb-page" data-href="https://www.facebook.com/mountroyallk" data-tabs="timeline" data-width="500"
+    data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+    data-show-facepile="true">
+    <blockquote cite="https://www.facebook.com/mountroyallk" class="fb-xfbml-parse-ignore">
+      <a href="https://www.facebook.com/mountroyallk">Mount Royal International School</a>
+    </blockquote>
+  </div>
+
+  <a class="twitter-timeline" data-width="500" data-height="600" data-theme="dark"
+    href="https://twitter.com/mrialert?ref_src=twsrc%5Etfw">Tweets by mrialert</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<br />
+
+{% endblock %}

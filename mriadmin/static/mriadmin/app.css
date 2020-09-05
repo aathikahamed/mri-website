@@ -1,0 +1,261 @@
+.mri-logo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-font {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.news-left img {
+  width: 500px;
+}
+
+.icon {
+  transform: rotate(45deg);
+}
+
+.news-heading {
+  margin-top: 40px;
+  margin-bottom: 45px;
+  width: 320px;
+  border-bottom: 5px solid #7510f7;
+}
+
+#admission {
+  width: 230px;
+}
+#calendar {
+  width: 220px;
+  margin-bottom: 0px;
+}
+#school-song-heading {
+  width: 230px;
+}
+
+#about {
+  width: 160px;
+}
+
+.grade-images {
+  border-radius: 5px;
+}
+
+.news {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 0;
+}
+
+.navbar-nav > a {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.123);
+}
+
+.footer-icons {
+  text-align: center;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
+@media screen and (max-width: 770px) {
+  .news {
+    grid-template-columns: 1fr;
+  }
+  .image-row {
+    flex-direction: column;
+  }
+  .contact {
+    flex-direction: column;
+  }
+}
+
+/* ADASDAD */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  padding: 20px;
+  background-color: #e7e7e7;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.timeline-content .date {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: gray;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    /* background-color: gray; */
+    background-color: white;
+    border: 4px solid wheat;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.contact div {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.contact div p {
+  font-size: 18px;
+}
+
+.contact-text {
+  margin-top: 15px;
+}
+
+#extra {
+  width: 440px;
+}
+
+.feeds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  /* justify-content: space-evenly; */
+}
+
+.school-song {
+  display: flex;
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+}
+
+.carousel-item {
+  height: 70vh;
+  background: #eee;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 700px) {
+  .carousel-item {
+    height: 50vh;
+  }
+  #extra {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .carousel-item {
+    height: 40vh;
+  }
+  .feeds {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #dropdown-heading {
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,22 @@
+{% extends 'mriadmin/layout.html' %}{% block body %}
+
+<h3 id="calendar" class="news-heading">CALENDAR</h3>
+
+<div id="container">
+  <div class="timeline">
+    <ul>
+      {% for event in events %}
+      <li>
+        <div class="timeline-content">
+          <h3 class="date">{{event.date}}</h3>
+          <h1>{{event.title}}</h1>
+          <p>
+            {{event.description}}
+          </p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
