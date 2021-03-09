@@ -1,6 +1,6 @@
 # MRI SCHOOL WEBSITE
 
-For the capstone project of cs50 I have created a fully responsive web app for a school.
+For the capstone project of cs50 I have created a fully responsive Web app using Django for a school.
 
 This web app consists of only one app, I have created html pages for every single page which inherit from the base template, there are 11 views inside of the views.py file, where one of them is an api view which accepts the form data from the frontend (Contact API). Optionally I have added a student exam marking system for the backend where teachers can login and store students mark, teachers cannot control other stuff on the admin panel where super admin can CRUD Calendar, News And Marks.
 
