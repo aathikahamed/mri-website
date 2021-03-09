@@ -1,4 +1,4 @@
-# CS50 Capstone Project
+# MRI SCHOOL WEBSITE
 
 For the capstone project of cs50 I have created a fully responsive web app for a school.
 
@@ -13,7 +13,7 @@ This web app consists of only one app, I have created html pages for every singl
 
 # Features!
   - Sends an email to the admin's inbox when contact form is submitted
-  - Create, Update and Dalete News and Calendar from the admin panel
+  - Create, Update and Delete News and Calendar from the admin panel
 
 
 
